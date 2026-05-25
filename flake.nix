@@ -30,8 +30,6 @@
         import nixpkgs (
           {
             overlays = [ 
-              inputs.bun2nix.overlays.default 
-              
               (final: prev: {
                 bun = prev.bun.overrideAttrs (oldAttrs: rec {
                   version = "1.3.13";
@@ -41,6 +39,8 @@
                   };
                 });
               })
+              
+              inputs.bun2nix.overlays.default 
             ];
           }
           // args
