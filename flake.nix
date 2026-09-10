@@ -83,9 +83,10 @@
           cargoLock = {
             lockFile = src + "/${final.cargoRoot}/Cargo.lock";
             # apple-codesign and isideload are pulled from git rather than crates.io.
+            # isideload comes from the mirdukkkkk fork until nab138/isideload#11 is merged upstream.
             outputHashes = {
-              "apple-codesign-0.1.0" = "sha256-1ajD3aHa6mUuMYVH8jluIh49J0vKTp4vrfX4T2i3oTg=";
-              "isideload-0.3.17" = "sha256-oGE+dY68Gv1rmTSHCycakkSCMvUN9YjZHB1gJSikuho=";
+              "apple-codesign-0.1.0" = "sha256-ZLG/mMvXvDycDlqcd2bMjDEHtw4IiBMZVYNmYVDDdMU=";
+              "isideload-0.3.17" = "sha256-f/0gcgkzEurhi0WJXakfmms1ssB+hikvRBVdUy8nX6U=";
             };
           };
           buildAndTestSubdir = final.cargoRoot;
